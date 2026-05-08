@@ -142,20 +142,3 @@ thread results, we have to eait for the threads to actually get their results
 | `run_10.txt`                        | Captured output of five `./cuda_hello 10` runs |
 | `gpu_info.txt`                      | `nvidia-smi` snapshot from the Nautilus pod    |
 | `REPORT.md`                         | This report                                    |
-
----
-
-## Compiling to PDF
-
-From the repo root:
-
-```bash
-pandoc REPORT.md -o REPORT.pdf \
-    --from=gfm \
-    --pdf-engine=xelatex \
-    -V geometry:margin=1in \
-    -V mainfont="Helvetica"
-```
-
-(Or any other Markdown→PDF renderer; the document uses only standard
-GFM features — headings, tables, fenced code blocks.)
